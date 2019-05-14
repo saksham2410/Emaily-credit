@@ -1,7 +1,9 @@
 const express = require("express");
-require("./services/passport");
+const app = express();
 const keys = require("./config/keys");
 const mongoose = require("mongoose");
+require("./models/User");
+require("./services/passport");
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, function(error) {
   if (error) {
@@ -11,7 +13,9 @@ mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, function(error) {
   }
 });
 
-const app = express();
+
+
+
 
 require("./routes/authRoutes")(app);
 
