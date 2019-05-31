@@ -19,7 +19,7 @@ passport.use(
         } else {
           new User({ googleId: profile.id }).save();
         }
-      });      
+      });
       console.log(accessToken);
       console.log(refreshToken);
       console.log(profile);
