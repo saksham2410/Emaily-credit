@@ -13,10 +13,6 @@ mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, function(error) {
   }
 });
 
-
-
-
-
 require("./routes/authRoutes")(app);
 
 const PORT = process.env.PORT || 5000;
